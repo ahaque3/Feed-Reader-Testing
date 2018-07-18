@@ -9,25 +9,25 @@ The user will click on any of the following items in the Spec List to run a test
 
 -The menu
 
-  -changes visibility when clicked
+    -changes visibility when clicked
   
-  -element is hidden by default
+    -element is hidden by default
   
 -RSS Feeds
 
-  -name defined & not empty
+    -name defined & not empty
   
-  -URL defined & not empty
+    -URL defined & not empty
   
-  -are defined
+    -are defined
   
 -Initial Entries
 
-  -at least a single .entry element
+    -at least a single .entry element
   
 -New Feed Selection
 
-  -content changes
+    -content changes
   
 Required folders/files
 ======================
@@ -37,43 +37,43 @@ The following folders are required to run the application & associated tests:
 
 -css
 
-  -icomoon.css
+    -icomoon.css
   
-  -normalize.css
+    -normalize.css
   
-  -style.css
+    -style.css
   
 -fonts
 
-  -icomoon.eot
+    -icomoon.eot
   
-  -icomoon.svg
+    -icomoon.svg
   
-  -icomoon.ttf
+    -icomoon.ttf
   
-  -icomoon.woff
+    -icomoon.woff
   
 -lib
 
-  -jasmine-3.1.0
+    -jasmine-3.1.0
   
-  -boot.js
+    -boot.js
   
-  -jasmine.css
+    -jasmine.css
   
-  -jasmine.js
+    -jasmine.js
   
-  -jasmine_favicon.png
+    -jasmine_favicon.png
   
-  -jasmine-jtml.js
+    -jasmine-jtml.js
   
 -js
 
-  -app.js
+    -app.js
   
-  -spec
+    -spec
   
-  -feedreader.js
+    -feedreader.js
   
 Getting Started
 ===============
