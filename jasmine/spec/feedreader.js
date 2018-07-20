@@ -52,6 +52,9 @@ $(function() {
            }
          }
          });
+         //checks flag
+         expect(isUrl).toBe(true);
+       });
 
 
         /* TODO: Write a test that loops through each feed
