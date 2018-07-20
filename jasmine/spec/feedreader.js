@@ -31,6 +31,26 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
+         //check that URL exists and is not empty
+         it('allFeeds Array has URL', ()=>{
+            let isUrl=true;
+            //check if URL is defined
+         allFeeds.forEach((item))=>{
+           if(item.url===undefined){
+             isUrl=false;
+           }
+           //check if URL is empty and is a string
+           if(item.url !== undefined){
+             if(item.url.length===0){
+               isUrl=false;
+             }
+           if(typeof item.url !=='string'){
+             isUrl=false;
+           }
+
+           }
+         }
+         });
 
 
         /* TODO: Write a test that loops through each feed
