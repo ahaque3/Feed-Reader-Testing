@@ -57,11 +57,33 @@ $(function() {
        });
 
 
-        /* TODO: Write a test that loops through each feed
+        /**********************************
+        : Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
-         */
+         *************************************/
+    it('allFeeds Array has NAME',()=>{
+      //value for checking valid name
+      let isName=true;
+
+      allFeeds.forEach((item))=>{
+        if(item.name===undefined){
+          //check if NAME has been defined
+          isName=false;
+        }
+        //check length/type if defined
+        if(item.name!== undefined){
+          if(item.name.length===0){
+            isName=false;
+          }
+          if(typeof item.name!=="string"){
+            isName=false;
+          }
+        }
     });
+    //check flag
+    expect(isName).toBe(true);
+  });
 
 
     /* TODO: Write a new test suite named "The menu" */
