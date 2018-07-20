@@ -27,10 +27,11 @@ $(function() {
         });
 
 
-        /* TODO: Write a test that loops through each feed
+        /**********************************
+         Write a test that loops through each feed
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
-         */
+         ***********************************/
          //check that URL exists and is not empty
          it('allFeeds Array has URL', ()=>{
             let isUrl=true;
