@@ -147,12 +147,23 @@ describe('Initial Entries',()=>{
      Write a new test suite named "New Feed Selection"
      ************/
      describe('New Feed Selection',()=>{
-
-
-
-        /* TODO: Write a test that ensures when a new feed is loaded
+        /********************
+         Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
-         */
+         ********************/
+         let feedFirst,feedSecond;
+        beforeEach((done)=>){
+          loadFeed(0, ()=>{
+            feedFirst=document.querySelector('.feed').innerHTML;
+            loadFeed(1,()=>{
+              feedSecond=document.querySelector('.feed').innerHTML;
+              done();
+            });
+          });
+        });
+        it('content changes', ()=>{
+          expect(feedFirst).not.toBe(feedSecond);
+        });
   });
 }());
