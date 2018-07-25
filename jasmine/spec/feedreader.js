@@ -32,11 +32,10 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          ***********************************/
-         //check that URL exists and is not empty
-         it('allFeeds Array has URL', ()=>{
-            let isUrl=true;
+
             //check if URL is defined
             it('allFeeds Array has url', function() {
+                let isUrl=true;
               allFeeds.forEach((feed)=>{
                   expect(feed.url).toBeDefined();
                   expect(feed.url.length).not.toBe(0);
@@ -71,7 +70,7 @@ $(function() {
     });
     //check flag
     expect(isName).toBe(true);
-  });
+  )};
 
 
     /*****************
@@ -79,7 +78,7 @@ $(function() {
     *******************/
     describe('The menu',()=>{
 
-    })
+
 
         /******************
          Write a test that ensures the menu element is
@@ -100,10 +99,10 @@ $(function() {
           ********************/
           it('menu toggles',()=>{
             //check if visibility toggles
-            $('menu-icon-link').click();
+            $(.'menu-icon-link').click();
             expect($('body').hasClass('menu-hidden')).toEqual(false);
             $('.menu-icon-link').click();
-            expect($'body').hasClass('menu-hidden')).toEqual(true);
+            expect($('body').hasClass('menu-hidden')).toEqual(true);
           });
         });
 
@@ -123,7 +122,7 @@ describe('Initial Entries',()=>{
      loadFeed(0,done);
    });
    it('at least a single .entry element',()=>{
-     let elem=document.querySelector('.feed');
+     let elem=document.getElementById('feed');
      //checks if there is at least one .entry element
      expect(elem.childElementCount).toBeGreaterThan(0);
    });
@@ -141,7 +140,7 @@ describe('Initial Entries',()=>{
          * Remember, loadFeed() is asynchronous.
          ********************/
          let feedFirst,feedSecond;
-        beforeEach((done)=>){
+        beforeEach((done)=>{
           loadFeed(0, ()=>{
             feedFirst=document.querySelector('.feed').innerHTML;
             loadFeed(1,()=>{
