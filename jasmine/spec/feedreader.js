@@ -40,7 +40,7 @@ $(function() {
                   expect(feed.url).toBeDefined();
                   expect(feed.url.length).not.toBe(0);
             })
-          })
+          });
          });
 
 
@@ -71,7 +71,7 @@ $(function() {
     //check flag
     expect(isName).toBe(true);
   )};
-
+)};
 
     /*****************
     Write a new test suite named "The menu"
@@ -122,9 +122,9 @@ describe('Initial Entries',()=>{
      loadFeed(0,done);
    });
    it('at least a single .entry element',()=>{
-     let elem=document.getElementById('feed');
+     let elem=$("div.feed .entry");
      //checks if there is at least one .entry element
-     expect(elem.childElementCount).toBeGreaterThan(0);
+     expect(elem.length).toBeGreaterThan(0);
    });
 
 });
