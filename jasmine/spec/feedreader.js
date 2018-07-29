@@ -70,8 +70,7 @@ $(function() {
     });
     //check flag
     expect(isName).toBe(true);
-  )};
-)};
+  });
 
     /*****************
     Write a new test suite named "The menu"
@@ -99,7 +98,7 @@ $(function() {
           ********************/
           it('menu toggles',()=>{
             //check if visibility toggles
-            $(.'menu-icon-link').click();
+            $('.menu-icon-link').click();
             expect($('body').hasClass('menu-hidden')).toEqual(false);
             $('.menu-icon-link').click();
             expect($('body').hasClass('menu-hidden')).toEqual(true);
